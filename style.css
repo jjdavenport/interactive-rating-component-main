@@ -67,10 +67,12 @@ button {
 }
 
 .select-button {
+  color: #fff;
   height: 80px;
   width: 80px;
   border-radius: 50%;
   background: var(--submit-background-color);
+  cursor: pointer;
 }
 
 .display-hidden {
@@ -92,6 +94,7 @@ main p {
 }
 
 .button {
+  color: #fff;
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -119,7 +122,7 @@ ul a {
   height: 4vh;
   width: 100%;
   background-color: var(--submit-background-color);
-  border-radius: 12px;
+  border-radius: 2rem;
   display: grid;
   place-items: center;
 }
