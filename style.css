@@ -1,121 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr auto;
+  background: var(--container-background-color);
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Overpass', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
 }
 
 :root {
-    --container-background-color: hsl(216, 12%, 8%); 
-    --main-background-color: hsl(213, 19%, 18%); 
-    --button-background-color: hsl(216, 12%, 54%); 
-    --main-gradient-background: linear-gradient(to bottom, hsl(215, 20%, 17%), hsl(215, 24%, 12%));
-    --submit-background-color: hsl(25, 97%, 53%); 
-    --default-font-color: hsl(0, 0%, 100%); 
-    --p-font-color: hsl(216, 12%, 54%); 
-    --button-hover-background-color: hsl(217, 12%, 63%); 
+  --container-background-color: hsl(216, 12%, 8%);
+  --main-background-color: hsl(213, 19%, 18%);
+  --button-background-color: hsl(216, 12%, 54%);
+  --main-gradient-background: linear-gradient(
+    to bottom,
+    hsl(215, 20%, 17%),
+    hsl(215, 24%, 12%)
+  );
+  --submit-background-color: hsl(25, 97%, 53%);
+  --default-font-color: hsl(0, 0%, 100%);
+  --p-font-color: hsl(216, 12%, 54%);
+  --button-hover-background-color: hsl(217, 12%, 63%);
 }
 
-.container {
-    height: 100vh;
-    width: 100vw; 
-    display: grid;
-    place-items: center;
-    grid-template-rows: 10fr auto;
-    background: var(--container-background-color);
+main {
+  height: 50vh;
+  width: 50vw;
+  background: var(--main-gradient-background);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 2%;
 }
 
-main{
-    height: 50vh;
-    width: 50vw;
-    background: var(--main-gradient-background);
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 2%;
+button {
+  border: none;
 }
 
 .display {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-main h1, h2{
-    color: var(--default-font-color);
+.hidden {
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
 }
 
-main p{
-    color: var(--p-font-color);
+.submit-display {
+  display: none;
 }
 
-.display img{
-    height: 50px;
-    width: 50px;
+.select-button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: var(--submit-background-color);
+}
+
+.display-hidden {
+  display: flex;
+}
+
+main h1,
+h2 {
+  color: var(--default-font-color);
+}
+
+main p {
+  color: var(--p-font-color);
+}
+
+.display img {
+  height: 50px;
+  width: 50px;
 }
 
 .button {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background: var(--main-gradient-background);
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: var(--main-gradient-background);
 }
 
 .button:hover {
-    background: var(--button-hover-background-color);
-    color: var(--default-font-color);
-    cursor: pointer;
+  background: var(--button-hover-background-color);
+  color: var(--default-font-color);
+  cursor: pointer;
 }
 
 ul {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
+  display: grid;
+  grid-template-columns: repeat(5, auto);
 }
 
-ul a{
-    display: grid;
-    place-items: center;
-    color: var(--p-font-color)
+ul a {
+  display: grid;
+  place-items: center;
+  color: var(--p-font-color);
 }
 
 .submit {
-    height: 4vh;
-    width: 20vw;
-    background-color: var(--submit-background-color);
-    border-radius: 12px;
-    display: grid;
-    place-items: center;
+  height: 4vh;
+  width: 100%;
+  background-color: var(--submit-background-color);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
 }
 
 .submit:hover {
-    background-color: var(--default-font-color);
-    color: var(--submit-background-color);
-    cursor: pointer;
+  background-color: var(--default-font-color);
+  color: var(--submit-background-color);
+  cursor: pointer;
 }
 
-.hidden{
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-}
-
-.hidden h1{
-    color: var(--submit-background-color);
+.hidden h1 {
+  color: var(--submit-background-color);
 }
 
 @media screen and (max-width: 375px) {
-    main {
-        height: 90vh;
-        width: 90vw;
-    }
+  main {
+    height: 90vh;
+    width: 90vw;
+  }
 }
