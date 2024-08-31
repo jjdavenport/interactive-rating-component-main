@@ -11,8 +11,8 @@ const Card = ({ data, submit, select, button }) => {
             <ul key={index}>
               <li>
                 <button
-                  className={`${button === i ? "bg-black" : "bg-white"}`}
-                  onClick={() => select(i)}
+                  className={`${button === i.number ? "bg-black" : "bg-white"}`}
+                  onClick={() => select(i.number)}
                   type="button"
                 >
                   {i.number}

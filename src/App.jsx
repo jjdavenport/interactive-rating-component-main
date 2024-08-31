@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       {submitted ? (
-        <Selected data={data} />
+        <Selected selected={button} data={data} />
       ) : (
         <Card data={data} button={button} select={select} submit={submit} />
       )}
