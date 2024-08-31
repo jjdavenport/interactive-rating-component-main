@@ -1,4 +1,4 @@
-const Card = ({ data }) => {
+const Card = ({ data, submit, select, button }) => {
   const header = data.header;
   return (
     <>
@@ -6,15 +6,21 @@ const Card = ({ data }) => {
         <img src={header.icon} />
         <h1>{header.h1}</h1>
         <p>{header.p}</p>
-        <form noValidate>
+        <form onSubmit={submit} noValidate>
           {data.ratings.map((i, index) => (
             <ul key={index}>
               <li>
-                <button>{i.number}</button>
+                <button
+                  className={`${button === i ? "bg-black" : "bg-white"}`}
+                  onClick={() => select(i)}
+                  type="button"
+                >
+                  {i.number}
+                </button>
               </li>
             </ul>
           ))}
-          <button>{header.button}</button>
+          <button type="submit">{header.button}</button>
         </form>
       </main>
     </>
