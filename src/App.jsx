@@ -1,5 +1,5 @@
 import data from "./components/assets/data.json";
-import Card from "./components/card";
+import Ratings from "./components/ratings";
 import Footer from "./components/footer";
 import Selected from "./components/selected";
 import { useState } from "react";
@@ -21,12 +21,21 @@ function App() {
 
   return (
     <>
-      {submitted ? (
-        <Selected selected={button} data={data} />
-      ) : (
-        <Card data={data} button={button} select={select} submit={submit} />
-      )}
-      <Footer />
+      <div className="flex h-full min-h-screen flex-col justify-between bg-veryDarkBlue font-overpass text-custom font-normal">
+        <div className="flex flex-1 items-center justify-center p-4">
+          {submitted ? (
+            <Selected selected={button} data={data} />
+          ) : (
+            <Ratings
+              data={data}
+              button={button}
+              select={select}
+              submit={submit}
+            />
+          )}
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }
