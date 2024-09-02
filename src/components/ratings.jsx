@@ -2,12 +2,12 @@ const Ratings = ({ data, submit, select, button }) => {
   const header = data.header;
   return (
     <>
-      <main className="from-backgroundTop to-backgroundBottom flex flex-col gap-6 rounded-2xl bg-gradient-to-b p-6 md:h-fit md:w-96 md:max-w-screen-md">
+      <main className="flex flex-col gap-6 rounded-2xl bg-gradient-to-b from-backgroundTop to-backgroundBottom p-6 md:h-fit md:w-96 md:max-w-screen-md">
         <div className="w-fit rounded-full bg-darkBlue p-3">
           <img className="h-4 w-4" src={header.icon} />
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold text-white">{header.h1}</h1>
+          <h1 className="text-3xl font-bold text-white">{header.h1}</h1>
           <p className="text-lightGrey">{header.p}</p>
         </div>
         <form
